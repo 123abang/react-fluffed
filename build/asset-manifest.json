@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4b90abd3.css",
+    "main.js": "/static/js/main.1a55d29c.js",
+    "static/js/488.336a4f5b.chunk.js": "/static/js/488.336a4f5b.chunk.js",
+    "static/media/fluffer.jpg": "/static/media/fluffer.b22de091cb1bf91b43d4.jpg",
+    "static/media/bg.jpg": "/static/media/bg.0cf2102fafd2545c03a7.jpg",
+    "index.html": "/index.html",
+    "main.4b90abd3.css.map": "/static/css/main.4b90abd3.css.map",
+    "main.1a55d29c.js.map": "/static/js/main.1a55d29c.js.map",
+    "488.336a4f5b.chunk.js.map": "/static/js/488.336a4f5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4b90abd3.css",
+    "static/js/main.1a55d29c.js"
+  ]
+}

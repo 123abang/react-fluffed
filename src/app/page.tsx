@@ -1,6 +1,6 @@
 'use client'
 
-import { Hero } from './components/hero'
+import { Hero } from './components'
 import { Roadmap } from './components/roadmap'
 import { Partners } from './components/partners'
 import { Community } from './components/community'
