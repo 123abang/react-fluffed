@@ -34,7 +34,9 @@ export function Roadmap() {
   return (
     <div>
       {/* Roadmap Section */}
-      <section id="roadmap" ref={ref} className="py-20 bg-indigo-900/50">
+      <section id="roadmap" ref={ref} className="py-20 bg-indigo-900/50"
+      style={{ backgroundColor: 'rgba(70, 130, 180, 0.8)' }} // Light blue with transparency
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-12 text-center">Roadmap</h2>
           <motion.div

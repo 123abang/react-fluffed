@@ -28,7 +28,9 @@ export function Community() {
   }
 
   return (
-    <section id="community" className="py-20">
+    <section id="community" className="py-20" 
+    style={{ backgroundColor: 'rgba(70, 130, 180, 0.8)' }} // Light blue with transparency
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center">Meet the Community</h2>
         <div className="relative w-full max-w-md mx-auto">

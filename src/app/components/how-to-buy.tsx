@@ -43,15 +43,36 @@ const pieChartData = {
   ],
 };
 
+const pieChartOptions = {
+  plugins: {
+    legend: {
+      labels: {
+        color: '#fff', // Set legend text to white
+        font: {
+          size: 14,
+        },
+      },
+    },
+    tooltip: {
+      bodyColor: '#fff', // Tooltip text color
+      backgroundColor: 'rgba(0, 0, 0, 0.8)', // Tooltip background color
+    },
+  },
+};
+
 export function HowToBuy() {
   return (
-    <section id="how-to-buy" className="py-20 bg-purple-900/30">
+    <section
+      id="how-to-buy"
+      className="py-20"
+      style={{ backgroundColor: 'rgba(70, 130, 180, 0.8)' }} // Light blue with transparency
+    >
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold mb-12 text-center"
+          className="text-4xl font-bold mb-12 text-center text-white"
         >
           How to Buy MemeCoins
         </motion.h2>
@@ -65,7 +86,7 @@ export function HowToBuy() {
               className="bg-purple-800/50 rounded-lg p-6 flex flex-col items-center text-center"
             >
               <step.icon size={48} className="mb-4 text-purple-300" />
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+              <h3 className="text-xl font-semibold mb-2 text-white">{step.title}</h3>
               <p className="text-purple-200">{step.description}</p>
             </motion.div>
           ))}
@@ -78,9 +99,9 @@ export function HowToBuy() {
           transition={{ duration: 0.5 }}
           className="mt-16 text-center"
         >
-          <h3 className="text-3xl font-bold mb-6">Token Allocation for fluffer </h3>
+          <h3 className="text-3xl font-bold mb-6 text-white">Token Allocation for Fluffer</h3>
           <div className="w-full max-w-md mx-auto">
-            <Pie data={pieChartData} />
+            <Pie data={pieChartData} options={pieChartOptions} />
           </div>
         </motion.div>
       </div>

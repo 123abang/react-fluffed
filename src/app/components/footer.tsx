@@ -5,7 +5,9 @@ import { Twitter, TextIcon as Telegram, DiscIcon as Discord } from 'lucide-react
 
 export function Footer() {
   return (
-    <footer className="bg-purple-900 py-12">
+    <footer className="bg-purple-900 py-12" 
+    style={{ backgroundColor: 'rgba(70, 130, 180, 0.8)' }} // Light blue with transparency
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <motion.div

@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 // import Image from 'next/image'
 
 const partners = [
-  { name: 'Partner 1', logo: '/placeholder.svg?height=100&width=100' },
+  { name: 'Partner 1', logo: '../../images/fluffer.jpg' },
   { name: 'Partner 2', logo: '/placeholder.svg?height=100&width=100' },
   { name: 'Partner 3', logo: '/placeholder.svg?height=100&width=100' },
   { name: 'Partner 4', logo: '/placeholder.svg?height=100&width=100' },
@@ -31,7 +31,9 @@ export function Partners() {
   }, [controls])
 
   return (
-    <section id="partners" className="py-20 overflow-hidden">
+    <section id="partners" className="py-20 overflow-hidden"
+    style={{ backgroundColor: 'rgba(70, 130, 180, 0.8)' }} // Light blue with transparency
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center">Our Partners</h2>
         <motion.div
@@ -42,12 +44,10 @@ export function Partners() {
           {[...partners, ...partners].map((partner, index) => (
             <div key={index} className="flex-shrink-0 w-48 mx-4">
               <div className="relative w-24 h-24 mb-4 mx-auto">
-                {/* <Image
+                <img
                   src={partner.logo}
                   alt={`${partner.name} logo`}
-                  layout="fill"
-                  objectFit="contain"
-                /> */}
+                />
               </div>
               <p className="text-center">{partner.name}</p>
             </div>

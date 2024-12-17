@@ -5,7 +5,13 @@ import FlufferImage from '../../images/fluffer.jpg'
 
 export function Hero() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center pt-20"
+      style={{
+        backgroundColor: 'rgba(70, 130, 180, 0.8)', // Light blue with some transparency
+      }}
+    >
       <div className="container mx-auto px-4 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -13,7 +19,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
         >
-          welcome to fluffer land  to the Moon!
+          welcome to fluffer land to the Moon!
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 50 }}
@@ -47,4 +53,3 @@ export function Hero() {
     </section>
   )
 }
-

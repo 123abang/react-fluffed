@@ -48,7 +48,7 @@ export function Tokenomics() {
           >
             <h3 className="text-2xl font-semibold mb-4">Token Distribution</h3>
             <ul className="space-y-2">
-              <li>Team: 10%</li>
+              <li style={{color:'white'}}>Team: 10%</li>
               <li>Marketing: 20%</li>
               <li>Development: 30%</li>
               <li>Community: 25%</li>
