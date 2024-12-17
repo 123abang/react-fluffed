@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 76, 29, 149;
+  --background-end-rgb: 30, 58, 138;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(76, 29, 149, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(76, 29, 149, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {background: rgba(76, 29, 149, 0.7);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom classes for the meme coin website */
+.bg-meme-gradient {
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+}
+
+.text-meme-gradient {
+  background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
