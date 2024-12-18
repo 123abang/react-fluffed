@@ -37,7 +37,9 @@ export function MediaGallery() {
   };
 
   return (
-    <section id="media-gallery" className="py-20 bg-gray-100">
+    <section id="media-gallery" className="py-20 bg-gray-100"
+    style={{ backgroundColor: 'rgba(70, 130, 180, 0.8)' }}
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center">Media Gallery</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
