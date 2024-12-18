@@ -8,12 +8,12 @@ import { Footer } from './components/footer';
 import { Navigation } from './components/navigation';
 import { FlyingText } from './components/flying-text';
 import { HowToBuy } from './components/how-to-buy';
-// import { MediaGallery } from './components/media-section'; 
+import { MediaGallery } from './components/media-section'; 
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-purple-900 via-indigo-900 to-blue-900 text-white overflow-hidden">
-      <Navigation />
+      <Navigation /> <br /><br />
       <Hero />
       <HowToBuy />
       <FlyingText text="Welcome to the future of meme coins!" direction="left" />
@@ -23,7 +23,7 @@ export default function Home() {
       <FlyingText text="Meet our awesome community!" direction="left" />
       <Community />
       <FlyingText text="Check out our latest updates!" direction="right" />
-      {/* <MediaGallery />  */}
+      <MediaGallery /> 
       <Footer />
     </main>
   );

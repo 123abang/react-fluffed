@@ -1,0 +1,14 @@
+# Node.js dependencies
+node_modules/
+
+# Cache directories
+.cache/
+
+# Logs
+*.log
+
+# macOS system files
+.DS_Store
+
+# Build output
+dist/

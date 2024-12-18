@@ -2,50 +2,33 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from '../../images/fluffer.jpg';
-import { Play } from 'lucide-react';
+import Dex from '../../images/IMG_1344.JPG';
+import Second from '../../images/IMG_1345.JPG';
+import Video from '../../images/IMG_1332.MP4';
 
-interface MediaItem {
-  type: 'image' | 'video';
-  src: string;
-  alt?: string;
-  thumbnail?: string;
-}
-
-const mediaItems: MediaItem[] = [
+// List of media items
+const mediaItems = [
   {
     type: 'image',
-    src: '/images/nature1.jpg',
+    src: Dex,
     alt: 'Beautiful nature scene 1',
   },
   {
     type: 'image',
-    src: '/images/nature2.jpg',
+    src: Second,
     alt: 'Beautiful nature scene 2',
   },
   {
     type: 'video',
-    src: '/videos/sample1.mp4',
-    thumbnail: '/images/video-thumbnail1.jpg',
+    src: Video,
     alt: 'Sample video 1',
-  },
-  {
-    type: 'image',
-    src: '/images/architecture1.jpg',
-    alt: 'Amazing architecture',
-  },
-  {
-    type: 'video',
-    src: '/videos/sample2.mp4',
-    thumbnail: '/images/video-thumbnail2.jpg',
-    alt: 'Sample video 2',
   },
 ];
 
 export function MediaGallery() {
-  const [selectedItem, setSelectedItem] = useState<MediaItem | null>(null);
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  const openModal = (item: MediaItem) => {
+  const openModal = (item) => {
     setSelectedItem(item);
   };
 
@@ -68,18 +51,23 @@ export function MediaGallery() {
               className="relative cursor-pointer"
               onClick={() => openModal(item)}
             >
-              <Image
-                src={item.type === 'image' ? item.src : item.thumbnail || ''}
-                alt={item.alt || 'Media item'}
-                width={600}
-                height={400}
-                layout="responsive"
-                className="rounded-lg shadow-lg"
-              />
-              {item.type === 'video' && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                  <Play size={48} className="text-white" />
-                </div>
+              {item.type === 'image' ? (
+                <img
+                  src={item.src}
+                  alt={item.alt || 'Media item'}
+                  className="w-full rounded-lg shadow-lg"
+                />
+              ) : (
+                <video
+                  src={item.src}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  className="w-full rounded-lg shadow-lg"
+                >
+                  Your browser does not support the video tag.
+                </video>
               )}
             </motion.div>
           ))}
@@ -87,19 +75,27 @@ export function MediaGallery() {
       </div>
 
       {selectedItem && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50" onClick={closeModal}>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
           <div className="max-w-4xl w-full p-4">
             {selectedItem.type === 'image' ? (
-              <Image
+              <img
                 src={selectedItem.src}
                 alt={selectedItem.alt}
-                width={800}
-                height={600}
-                layout="responsive"
-                className="rounded-lg"
+                className="w-full rounded-lg"
               />
             ) : (
-              <video src={selectedItem.src} controls className="w-full rounded-lg">
+              <video
+                src={selectedItem.src}
+                muted
+                autoPlay
+                loop
+                controls
+                playsInline
+                className="w-full rounded-lg"
+              >
                 Your browser does not support the video tag.
               </video>
             )}
